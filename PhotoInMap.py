@@ -13,7 +13,7 @@ class PhotoInMap(object):
 
   def __init__(self):
     self.source_dir = 'img'
-    self.target_dir = 'output1'
+    self.target_dir = 'output'
     self.source_filenames = glob('{}/*'.format(self.source_dir))
 
   def embed(self):
