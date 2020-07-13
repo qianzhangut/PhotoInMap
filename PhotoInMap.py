@@ -1,10 +1,10 @@
 import os
-import exifread
 import re
-import folium
 import base64
 from glob import glob
 from PIL import Image
+import exifread
+import folium
 
 m = folium.Map(location=[43.6532, -79.3832])
 
@@ -59,8 +59,7 @@ class PhotoInMap(object):
           encoded = base64.b64encode(open(filename.replace(self.source_dir, self.target_dir),'rb').read())
 
           text = '<p> time: %s </p><img src="data:image/jpeg;base64,{}">' % date_shoot
-          # text = '<p> University of Toronto: lat %.2f, lon %.2f</p><img src="ball.png;base64,{}">' % (lat, lon)
-          # html = '<p> University of Toronto</p><img src="data:image/png;base64,{}">'.format
+
           html = text.format
           iframe = folium.IFrame(html=html(encoded.decode("utf-8")), width=500, height=300)
           popup = folium.Popup(iframe, max_width=500)
@@ -74,5 +73,3 @@ if __name__ == '__main__':
   a = PhotoInMap()
   my = a.embed()
   my.save("mymap.html")
-#https://www.thexifer.net/#exif-general
-#https://wallpapercave.com/w/wp4009370
