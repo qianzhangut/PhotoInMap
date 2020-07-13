@@ -9,7 +9,7 @@ folium enables the binding of data to a map for choropleth visualizations
 
     pip3 install folium
 
-Here is an example of a few CN Tower photos[1] (https://wallpapercave.com/). I embeded random location and datetime information 2](https://www.thexifer.net/#exif-general) into these photos[, that's why you see some photos are located in the lake.
+Here is an example of a few [CN Tower photos](https://wallpapercave.com/). I [embeded random location and datetime information](https://www.thexifer.net/#exif-general) into these photos. That's why you see some photos are located in the lake.
 
 
 
